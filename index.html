@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Movie Generator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main
+      class="h-screen flex flex-col justify-center items-center bg-gradient-to-r from-indigo-500 via-sky-600 to-green-500"
+    >
+      <h1 class="text-white text-4xl pt-5">Need a movie recommendation?</h1>
+      <br />
+      <button id="button"
+        class="text-white border bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 rounded-md p-2 mt-4"
+      >
+        Click Me!
+      </button>
+      <br />
+
+      <div class="text-white text-2xl" id="movieContent">
+        <img src="" />
+        <h3 id="title">Title:</h3>
+        <br />
+        <h3 id="description">Description:</h3>
+        <br />
+        <h3 id="rating">Rating:</h3>
+      </div>
+    </main>
+  </body>
+</html>
