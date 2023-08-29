@@ -24,13 +24,27 @@
       </button>
       <br />
 
-      <div class="invisible text-white text-2xl" id="movieContent">
-        <!-- <img src="" /> -->
-        <h3 id="title">Title:</h3>
+      <div class="text-white text-2xl" id="movieContent">
+        <h3 class="mb-3 items-center flex flex-wrap justify-center">
+          <img
+            class="object-contain h-48 w-96"
+            id="poster"
+            src=""
+            alt="Movie Poster"
+          />
+        </h3>
+        <div class="border-b mb-3 flex items-center justify-center">
+          <span class="mr-2">Title:</span>
+          <h3 id="title"></h3>
+        </div>
+
         <br />
-        <h3 id="description">Description:</h3>
+        <div class="border-b mb-3 flex items-center justify-center">
+          <span class="mr-2">Year Released:</span>
+          <h3 id="release-date"></h3>
+        </div>
+
         <br />
-        <h3 id="rating">Rating:</h3>
       </div>
     </main>
     <script src="app.js"></script>

@@ -1,9 +1,10 @@
 const movieTitle = document.getElementById("title");
-const movieDescription = document.getElementById("description");
-const movieRating = document.getElementById("rating");
+const releaseDate = document.getElementById("release-date");
+const moviePoster = document.getElementById("poster");
 const button = document.getElementById("submitButton");
 
-const url = 'https://moviesdatabase.p.rapidapi.com/titles?startYear=1970&endYear=2023';
+const url =
+  "https://moviesdatabase.p.rapidapi.com/titles?startYear=1970&endYear=2023";
 const options = {
   method: "GET",
   headers: {
@@ -18,4 +19,10 @@ fetch(url, options)
   })
   .then(function (data) {
     console.log(data);
+    movieTitle.textContent = data.results[0].originalTitleText.text;
+    releaseDate.textContent = data.results[0].releaseYear.year;
+
+    const imageURL = data.results[0].primaryImage.url;
+
+    moviePoster.src = imageURL;
   });
