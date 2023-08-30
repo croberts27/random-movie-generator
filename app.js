@@ -4,8 +4,7 @@ const moviePoster = document.getElementById("poster");
 const button = document.getElementById("submitButton");
 const movieContent = document.getElementById("movieContent");
 
-const url =
-  "https://moviesdatabase.p.rapidapi.com/titles?startYear=1970&endYear=2023";
+const url = "https://moviesdatabase.p.rapidapi.com/titles?";
 const options = {
   method: "GET",
   headers: {
@@ -21,14 +20,18 @@ button.addEventListener("click", function () {
   fetch(url, options)
     .then(function (response) {
       return response.json();
-      
     })
     .then(function (data) {
       console.log(data);
-      movieTitle.textContent = data.results[0].originalTitleText.text;
-      releaseDate.textContent = data.results[0].releaseYear.year;
 
-      const imageURL = data.results[0].primaryImage.url;
+      const randomIndex = Math.floor(Math.random() * data.results.length);
+      const movie = data.results[randomIndex];
+      console.log(movie);
+
+      movieTitle.textContent = movie.originalTitleText.text;
+      releaseDate.textContent = movie.releaseYear.year;
+
+      const imageURL = movie.primaryImage.url;
       moviePoster.src = imageURL;
 
       // Display the content
