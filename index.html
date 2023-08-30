@@ -10,7 +10,7 @@
     />
   </head>
   <body>
-    <main
+    <header
       class="h-screen flex flex-col justify-center items-center bg-gradient-to-r from-indigo-500 via-sky-600 to-green-500"
     >
       <h1 class="text-white text-4xl pt-5">Need a movie recommendation?</h1>
@@ -22,12 +22,13 @@
       >
         Click Me!
       </button>
+
       <br />
 
-      <div class="text-white text-2xl" id="movieContent">
+      <main class="text-white text-2xl" id="movieContent">
         <h3 class="mb-3 items-center flex flex-wrap justify-center">
           <img
-            class="object-contain h-48 w-96"
+            class="object-contain h-50 w-96"
             id="poster"
             src=""
             alt="Movie Poster"
@@ -45,8 +46,8 @@
         </div>
 
         <br />
-      </div>
-    </main>
+      </main>
+    </header>
     <script src="app.js"></script>
   </body>
 </html>
